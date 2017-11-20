@@ -86,6 +86,7 @@ window.addEventListener('load', function() {
         ul.insertBefore(li,ul.firstElementChild);
 
         areaText.textContent = area.value;
+        areaText.classList.add('area-text');
           
         area.value = ''; 
     } 
