@@ -122,3 +122,6 @@ li{
     padding: 5px;
 
 }
+input:focus{
+    background-color: rgba(105, 168, 4, 0.192);
+}

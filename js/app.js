@@ -18,7 +18,7 @@ window.addEventListener('load', function() {
     var area = document.createElement('textarea');
     var addButton = document.createElement('button');
     var newArea = document.createElement('textarea');
-
+    
     firstText.addEventListener('click',hidden)
     // ocultar texto y mostrar formulario
     function hidden(){
@@ -73,20 +73,21 @@ window.addEventListener('load', function() {
     addButton.addEventListener ('click',repeatArea)
 
     function repeatArea(){
-        if(addButton)
-        secondDiv.appendChild(area);
-        secondDiv.insertBefore(newArea, area);
-        area.classList.add('new-area');
-        secondDiv.className = 'second-style';
-    }   
-    /*   
-    addCard.addEventListener("focus",setFocusedElement,true);
+        
+        var ul = document.createElement('ul');
+        var li = document.createElement('li');
+        var areaText = document.createElement('p');
+        
+        secondDiv.appendChild(ul);
+        ul.appendChild(li);
+        li.appendChild(areaText);
+       
+        secondDiv.insertBefore(ul,area);
+        ul.insertBefore(li,ul.firstElementChild);
 
-    function setFocusedElement(){
-    
-      var focused = document.focusedElement;
-      addCard.value = focused.tagName;
-    }
-    */
-
+        areaText.textContent = area.value;
+          
+        area.value = ''; 
+    } 
+ 
 });
