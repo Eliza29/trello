@@ -93,5 +93,20 @@ li{
 .style-input{
     height: 34px;
     width:262px;
-
+}
+.second-div{
+    background:#e2e4e6; 
+    height: 85px;
+    width: 273px;
+    padding: 5px;
+}
+.name-input{
+    background:#e2e4e6; 
+    padding: 6px;
+}
+.add-card{
+    color: grey;
+    background:#e2e4e6; 
+    padding: 5px;
+    text-decoration: underline;  
 }

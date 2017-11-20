@@ -1,24 +1,25 @@
 /* Funcionalidades
-Versión 0.0.1
-Se mostrará el texto "Añadir una lista ...".
-Al hacer click se debe ocultar el texto y mostrar un formulario.
-El formulario está conformado por un input y un botón para que 
-pueda añadir tareas a tu lista.*/
+Versión 0.0.2
+Al dar click en el botón de "Guardar", se mostrará 
+un nuevo cuadro donde estará el nombre de la lista agregada.
+Mostrar un texto de "Añadir una tarea" dentro de la lista*/
 
 window.addEventListener('load', function() {
     
     var firstText = document.getElementById('first-js')
     var container = document.getElementById('container-js') 
+    var newDiv = document.createElement('div');
+    var input = document.createElement('input');
+    var button = document.createElement('button');
+    var secondDiv = document.createElement('div');
+    var nameInput= document.createElement('p');
+    var addCard = document.createElement('p');
     
     firstText.addEventListener('click',hidden)
-    // ocultar texto
+    // ocultar texto y mostrar formulario
     function hidden(){
         if(firstText){
             container.removeChild(firstText);
-            var newDiv = document.createElement('div');
-            var input = document.createElement('input');
-            var button = document.createElement('button');
-            
             container.appendChild(newDiv);
             newDiv.appendChild(input);
             newDiv.appendChild(button);
@@ -28,11 +29,27 @@ window.addEventListener('load', function() {
             input.classList.add('style-input')
             button.classList.add('style-button')
         }
-
-  
     }
-   
-   
-
-
+    //obteniendo el valor del texto agregado en el input
+    input.addEventListener('keyup',name)
+    function name(){
+        if(input.value){
+            nameInput.textContent = input.value;
+        }
+    }
+    button.addEventListener('click',nameCard)
+    function nameCard(){
+        if(button){
+            container.removeChild(newDiv);
+            container.appendChild(secondDiv);
+            secondDiv.appendChild(nameInput);
+            secondDiv.appendChild(addCard);
+            
+            addCard.textContent = 'Añadir una tarjeta ...'
+            
+            secondDiv.classList.add('second-div')
+            nameInput.classList.add('name-input')
+            addCard.classList.add('add-card')
+            }
+        }
 });
