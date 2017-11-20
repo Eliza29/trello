@@ -66,7 +66,7 @@ li{
     width: 98%;
     margin-left:10px; 
     margin-top: 30px;
-    outline: 1px solid brown;
+    
 }
 .first-text{
     border: none;
@@ -77,6 +77,21 @@ li{
     width: 250px;
     padding: 10px 15px;
 }
-.text-hidden{
-    visibility: hidden;
+.new-div{
+    background:#e2e4e6; 
+    height: 90px;
+    width: 273px;
+    padding: 5px;
+    
+}
+.style-button{
+    background: #5aac44;
+    color: #ffffff;
+    height: 31px;
+    width: 86px; 
+}
+.style-input{
+    height: 34px;
+    width:262px;
+
 }

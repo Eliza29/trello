@@ -8,18 +8,30 @@ pueda añadir tareas a tu lista.*/
 window.addEventListener('load', function() {
     
     var firstText = document.getElementById('first-js')
+    var container = document.getElementById('container-js') 
     
     firstText.addEventListener('click',hidden)
     // ocultar texto
     function hidden(){
-    firstText.classList.toggle('text-hidden');
+        if(firstText){
+            container.removeChild(firstText);
+            var newDiv = document.createElement('div');
+            var input = document.createElement('input');
+            var button = document.createElement('button');
+            
+            container.appendChild(newDiv);
+            newDiv.appendChild(input);
+            newDiv.appendChild(button);
+            button.textContent = 'Guardar';   
+            
+            newDiv.classList.add('new-div')
+            input.classList.add('style-input')
+            button.classList.add('style-button')
+        }
+
+  
     }
-    
-    //function boxHidden(){
-    //firstText.className = 'text-hidden';
-     
-    
-    //añadir input
+   
    
 
 
