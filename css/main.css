@@ -96,7 +96,6 @@ li{
 }
 .second-div{
     background:#e2e4e6; 
-    height: 85px;
     width: 273px;
     padding: 5px;
 }
@@ -110,7 +109,16 @@ li{
     padding: 5px;
     text-decoration: underline;  
 }
-.style-area{
-    width: 260px;  
-    overflow: hidden;
+.style-area .new-area{ 
+    width: 258px;  
+    overflow: hidden; 
+    display: block; 
+    outline: 1px solid red; 
+}
+.second-style {
+    background:#e2e4e6;
+    height:200px ; 
+    width: 273px;
+    padding: 5px;
+
 }

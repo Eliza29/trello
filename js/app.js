@@ -1,7 +1,9 @@
 /* Funcionalidades
-Versión 0.0.3
-Al dar click en "Añadir una tarea", deberá mostrar
-un formulario con un textarea y un botón que diga "Añadir".*/
+Versión 0.0.4
+
+Poner focus al input al dar click en "Agregar nueva tarea".
+Al dar click en el botón de "Añadir", deberá 
+aparecer el texto de la tarea debajo del título de la lista..*/
 
 window.addEventListener('load', function() {
     
@@ -15,6 +17,7 @@ window.addEventListener('load', function() {
     var addCard = document.createElement('p');
     var area = document.createElement('textarea');
     var addButton = document.createElement('button');
+    var newArea = document.createElement('textarea');
 
     firstText.addEventListener('click',hidden)
     // ocultar texto y mostrar formulario
@@ -53,7 +56,7 @@ window.addEventListener('load', function() {
             addCard.classList.add('add-card');
             }
         }
-        
+    // Agregando el area   
     addCard.addEventListener('click',addArea)
         function addArea(){
         if(addCard){
@@ -67,5 +70,23 @@ window.addEventListener('load', function() {
 
             }
         }
+    addButton.addEventListener ('click',repeatArea)
+
+    function repeatArea(){
+        if(addButton)
+        secondDiv.appendChild(area);
+        secondDiv.insertBefore(newArea, area);
+        area.classList.add('new-area');
+        secondDiv.className = 'second-style';
+    }   
+    /*   
+    addCard.addEventListener("focus",setFocusedElement,true);
+
+    function setFocusedElement(){
     
+      var focused = document.focusedElement;
+      addCard.value = focused.tagName;
+    }
+    */
+
 });
