@@ -84,7 +84,7 @@ li{
     padding: 5px;
     
 }
-.style-button{
+.style-button,.add-button {
     background: #5aac44;
     color: #ffffff;
     height: 31px;
@@ -109,4 +109,8 @@ li{
     background:#e2e4e6; 
     padding: 5px;
     text-decoration: underline;  
+}
+.style-area{
+    width: 260px;  
+    overflow: hidden;
 }
